@@ -1,7 +1,7 @@
 install:
 	#install cammands 
 	pip install --upgrade pip && \
-	pip install -r requirements.txt \	
+	pip install -r requirements.txt 
 run_python:
 	#run textblob
 	python -m textblob.download_corpora
