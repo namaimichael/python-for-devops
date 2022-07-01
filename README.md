@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/namaimichael/python-for-devops/actions/workflows/devops.yml/badge.svg)](https://github.com/namaimichael/python-for-devops/actions/workflows/devops.yml)
+
 # python-for-devops
 This is Python for DevOps 
 
