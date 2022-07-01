@@ -1,5 +1,7 @@
 install:
 	#install cammands 
+	pip install --upgrade pip && \
+		pip install -r requirements.txt
 format:
 	#format code
 lint:
