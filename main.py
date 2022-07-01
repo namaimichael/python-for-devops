@@ -1,3 +1,5 @@
+from unittest import result
 from mylib.logic import wiki
 
-print(wiki())
+result = wiki ()
+print(result)
