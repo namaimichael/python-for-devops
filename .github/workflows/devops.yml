@@ -23,7 +23,7 @@ jobs:
         make test
     - name: Build Container
       run: |
-        #make build
+        make build
   
 
     
