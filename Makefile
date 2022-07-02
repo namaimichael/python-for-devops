@@ -17,7 +17,7 @@ build:
 	docker build -t wikiapi .
 run:
 	#run container
-	docker run -p 127.0.0.1:8282:8282 fastapi
+	docker run -p 127.0.0.1:8282:8282 wikiapi
 deploy:
 	#deploy
 all: install format lint test build run 
