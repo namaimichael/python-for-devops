@@ -12,4 +12,3 @@ This is Python for DevOps
 4. Populate `Makefile`
 5. Build cli using Python `./cli-fire.py --help ` to test the logic 
 
-## This is just a test
