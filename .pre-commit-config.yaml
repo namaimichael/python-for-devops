@@ -16,3 +16,16 @@ repos:
         language_version: python3.10
         files: \.pyi?$
         types: []
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: [
+            "-rn", # Only display messages
+            "--disable=R,C, *.py mylib/*.py",
+            "-sn", # Don't display the score
+          ]
