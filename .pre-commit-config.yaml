@@ -24,8 +24,12 @@ repos:
         entry: pylint
         language: system
         types: [python]
-        args: [
-            "-rn", # Only display messages
-            "--disable=R,C, *.py mylib/*.py",
-            "-sn", # Don't display the score
-          ]
+        args: ["-rn", "--disable=R,C, *.py, mylib/*.py", "-sn"]
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        types: [python]
+        verbose: true
+        # files: test_*.py
+        args: ["--cov=mylib", "--cov=main"]

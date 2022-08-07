@@ -3,6 +3,10 @@ install:
 	pip install --upgrade pip && \
 	pip install -r requirements.txt && \
 	python -m textblob.download_corpora
+
+pre-commit:
+	#pre-commit code
+		pre-commit run -a
 format:
 	#format code
 	black *.py mylib/*.py
