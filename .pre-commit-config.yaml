@@ -12,6 +12,7 @@ repos:
     rev: 22.6.0
     hooks:
       - id: black
+        exclude: ^.md
         language_version: python3.10
         files: \.pyi?$
         types: []
