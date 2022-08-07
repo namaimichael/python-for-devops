@@ -10,4 +10,4 @@ This is Python for DevOps
 2. Edit my ~/.bashrc  `source ~/.venv/bin/activate
 3. Create empty files: `Makefile`, `requirements.txt`, `main.py`,`Dockerfile`, `mylib/__init__.py`
 4. Populate `Makefile`
-5. Build cli using Python `./cli-fire.py --help ` to test the logic
+5. Build cli using Python `./cli-fire.py --help ` to test the logic.
