@@ -25,11 +25,11 @@ repos:
         language: system
         types: [python]
         args: ["-rn", "--disable=R,C, *.py, mylib/*.py", "-sn"]
-      - id: pytest
-        name: pytest
-        entry: pytest
-        language: system
-        types: [python]
-        verbose: true
-        # files: test_*.py
-        args: ["--cov=mylib", "--cov=main"]
+      # - id: pytest
+      #   name: pytest
+      #   entry: pytest
+      #   language: system
+      #   types: [python]
+      #   verbose: true
+      #   # files: test_*.py
+      #   args: ["--cov=mylib", "--cov=main"]
