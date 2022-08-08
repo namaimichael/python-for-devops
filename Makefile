@@ -13,9 +13,9 @@ pre-commit:
 # lint:
 # 	#flake8 or pylint
 # 	pylint --disable=R,C *.py mylib/*.py
-# test:
-# 	#test
-# 	python -m pytest -vv --cov=mylib --cov=main test_*.py
+test:
+	#test
+	python -m pytest -vv --cov=mylib --cov=main test_*.py
 build:
 	#build container
 	docker build -t wikiapi .
