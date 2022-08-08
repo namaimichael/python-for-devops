@@ -21,6 +21,7 @@ jobs:
       - name: Install Pre-commit
         run: | 
           pip install pre-commit
+          make install
       - name: Run Pre-commit
         uses: pre-commit/action@v3.0.0
   build:
