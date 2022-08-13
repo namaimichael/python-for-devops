@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  pre-commit:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,46 +17,54 @@ jobs:
           python-version: 3.10.5
           architecture: x64
           cache: "pip"
-      - name: Install Pre-commit
+      - name: Install Dependencies
         run: |
           make install
           pre-commit install
+          python -m textblob.download_corpora
       - name: Run Pre-commit
         uses: pre-commit/action@v3.0.0
-  test:
-    runs-on: ubuntu-latest
-    needs: pre-commit
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.10.5
-          architecture: x64
-          cache: "pip"
-      - name: Install dependencies
-        run: |
-          make install
       - name: Test Code
         run: |
           make test
-  build:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.10.5
-          architecture: x64
-          cache: "pip"
-      - name: Install dependencies
-        run: |
-          make install
-          python -m textblob.download_corpora
       - name: Build Container
         run: |
           make build
+
+  # test:
+  #   runs-on: ubuntu-latest
+  #   needs: pre-commit
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Setup Python
+  #       uses: actions/setup-python@v3
+  #       with:
+  #         python-version: 3.10.5
+  #         architecture: x64
+  #         cache: "pip"
+  #     - name: Install dependencies
+  #       run: |
+  #         make install
+  #     - name: Test Code
+  #       run: |
+  #         make test
+  # build:
+  #   runs-on: ubuntu-latest
+  #   needs: test
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Setup Python
+  #       uses: actions/setup-python@v3
+  #       with:
+  #         python-version: 3.10.5
+  #         architecture: x64
+  #         cache: "pip"
+  #     - name: Install dependencies
+  #       run: |
+  #         make install
+  #         python -m textblob.download_corpora
+  #     - name: Build Container
+  #       run: |
+  #         make build
