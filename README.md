@@ -1,10 +1,10 @@
-[![Python application test with Github Actions](https://github.com/namaimichael/python-for-devops/actions/workflows/devops.yml/badge.svg)](https://github.com/namaimichael/python-for-devops/actions/workflows/devops.yml)
-
 # Python-For-Devops
 
-This is Python for DevOps
+[![Python application test with Github Actions](https://github.com/namaimichael/python-for-devops/actions/workflows/devops.yml/badge.svg)](https://github.com/namaimichael/python-for-devops/actions/workflows/devops.yml)
 
-## Scaffold
+## This is Python for DevOps
+
+### Scaffold
 
 1. Create a Python Virtual Environment `python3 -m venv ~/.venv` or `virtualenv ~/.venv` # macOS/Linux # You may need to run sudo apt-get install python3-venv first
 `python3 -m venv .venv`
